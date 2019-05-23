@@ -1,0 +1,10 @@
+{
+    "development": {
+        "config_id": "development",
+        "app_name" : "Steam_gameData_Parser_dev",
+        "node_port": 4000,
+        "steam_api_key": "C23B6844F66F5256F4B7E0AC28025017",
+        "json_indentation": 4,
+        "save_path": "C:\\Users\\zeeshan.abedin\\Documents\\steamCsv"
+    }
+}
