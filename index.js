@@ -22,8 +22,8 @@ app.get('/', (httpRequest, httpResponse) => {
     
     var steamCalls = new steamapicalls(process.env.NODE_ENV);
     steamCalls.getAppListFromSteam()
-        .then(function(err, steamBody){
-            console.log(steamBody);
+        .then((steamBody) => {
+            httpResponse.send(steamBody);
         });
     
  

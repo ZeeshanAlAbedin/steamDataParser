@@ -17,10 +17,22 @@
 
     getAppListFromSteam() {
         var api_url = 'http://api.steampowered.com/ISteamApps/GetAppList/v2';
-        request.get(api_url, (error, steamResponse, steamBody) => {           
+
+        // Return new promise
+        return new Promise((resolve, reject) => {
+            request.get(api_url, (error, steamResponse, steamBody) => {
+                if(error){
+                    reject(error);
+                }else{
+                    resolve(steamBody);
+                }
+            })
+        })
+
+        /*request.get(api_url, (error, steamResponse, steamBody) => {           
             var obj = JSON.stringify(steamBody.applist);     
             return obj;                 
-        })
+        })*/
     }
         
     
